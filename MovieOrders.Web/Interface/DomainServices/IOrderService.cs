@@ -4,7 +4,7 @@ namespace MovieOrders.Web.Interface.DomainServices;
 
 public interface IOrderService
 {
-    Task<OrderDto> CreateOrderAsync(OrderDto order);
+    Task CreateOrderAsync(List<MovieDto> movies);
     Task<OrderDto> GetOrderAsync(int id);
     Task<List<OrderDto>> GetOrdersAsync();
 }

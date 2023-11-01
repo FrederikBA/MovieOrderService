@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using MovieOrders.Web.Consumer;
 using MovieOrders.Web.Data;
+using MovieOrders.Web.Interface.DomainServices;
 using MovieOrders.Web.Interface.Repository;
+using MovieOrders.Web.Service;
 
 var policyName = "AllowOrigin";
 
@@ -32,6 +34,7 @@ builder.Services.AddDbContext<OrderContext>(options =>
 //Build services
 
 //Domain services
+builder.Services.AddScoped(typeof(IOrderService), typeof(OrderService));
 
 //Background services
 builder.Services.AddHostedService<CreateOrderConsumer>();
