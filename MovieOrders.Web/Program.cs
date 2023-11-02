@@ -1,9 +1,11 @@
+using Ardalis.Specification;
 using Microsoft.EntityFrameworkCore;
 using MovieOrders.Web.Consumer;
 using MovieOrders.Web.Data;
 using MovieOrders.Web.Interface.DomainServices;
 using MovieOrders.Web.Interface.Repository;
 using MovieOrders.Web.Service;
+using MovieOrders.Web.Specifications;
 
 var policyName = "AllowOrigin";
 
